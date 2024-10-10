@@ -10,16 +10,20 @@ namespace Dominio.Entidades
     {
 
         public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
-
         private static int _ultimoId;
+        public string NombreUser { get; set; }
+        public string ApellidoUser { get; set; }
+        public string EmailUser { get; set; }
+        public string PasswordUser { get; set; }
 
-        // sobrecargad de metodos
 
-        public Usuario(string nombre)
+        public Usuario(int IdUsuario, string nombreUser, string apellidoUser, string emailUser, string passwordUser)
         {
             IdUsuario = _ultimoId++;
-            Nombre = nombre;
+            NombreUser = nombreUser;
+            ApellidoUser = apellidoUser;
+            EmailUser = emailUser;
+            PasswordUser = passwordUser;
         }
 
     }
